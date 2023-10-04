@@ -1,0 +1,380 @@
+/* /root */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+:root{
+
+  --color1 : #000;
+  --color2 : #000;
+  --color3 : #000;
+  --color4 : #000;
+  --color5 : #fff
+}
+
+body{
+  background: var(--color1);
+  min-height: 300vh;
+}
+
+/* theme, color, etc */
+.filter-white{
+  filter: invert(100%) sepia(0%) saturate(73%) hue-rotate(4deg) brightness(106%) contrast(106%);
+}
+
+.filter-black{
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(97%) contrast(104%);
+}
+
+.theme-light{
+
+  --color1 : #f8efe0;
+  --color2 : #f5f5f5;
+  --color3 : #fbfbfb;
+  --color4 : #ffffff;
+  --color5 : #000;
+  
+}
+
+.c-white{
+  color: var(--color5);
+}
+
+.sm_icon{
+
+  height: 24px;
+  width: 24px;
+}
+
+/* Bridge */
+
+.navbar{
+  background: var(--color1);
+  position: fixed;
+  top: 0; left: 0; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  z-index: 100000;
+}
+
+.gambar {
+  width: 8vh;
+  height: auto ;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0%;
+}
+
+.navbar .logo{
+
+  position: relative;
+  color: var(--color1);
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+.navbar ul{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navbar ul li{
+  position: relative;
+  list-style: none;
+}
+
+.navbar ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color5);
+}
+
+/* Main Deck */
+
+.main_banner{
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(images/bg_lungmen.jpg);
+  background-size: cover;
+  display: flex;
+}
+
+.banner{
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+}
+
+.content{
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .textBox{
+
+  position: relative;
+  max-width: 600px;
+
+}
+
+.content .textBox h2{
+
+  color: var(--color5);
+  font-size: 4em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.content .textBox h2 span{
+
+  font-size: 2em;
+  color: var(--color5);
+}
+
+.content .textBox p{
+
+  color: var(--color5);
+}
+
+.container{
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 100px;
+  width: 1200px;
+  height: 500px;
+  background: var(--color1);
+  transition: 0.25s;
+}
+
+.container .box-one{
+
+  position: relative;
+  object-fit: cover;
+  margin-left: -25px ;
+  background: url(images/char/avg_1028_texas2_1#1$2.png);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box-two{
+
+  position: relative;
+  object-fit: cover;
+  margin-left: -25px ;
+  background: url(images/char/avg_1029_yato2_1#10$1.png);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box-three{
+
+  position: relative;
+  object-fit: cover;
+  margin-left: -25px ;
+  background: url(images/char/avg_1031_slent2_1#1$2.png);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box-four{
+
+  position: relative;
+  object-fit: cover;
+  margin-left: -25px ;
+  background: url(images/char/avg_103_angel_1#10$1.png);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box-five{
+
+  position: relative;
+  object-fit: cover;
+  margin-left: -25px ;
+  background: url(images/char/yato_alt.webp);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:hover .box-effect{
+  filter: grayscale(0);
+}
+
+.container .box-effect:hover{
+  filter:  brightness(1.25);
+}
+
+.container:has(.box-one:hover){
+
+  grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+.container:has(.box-two:hover){
+
+  grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+.container:has(.box-three:hover){
+
+  grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+.container:has(.box-four:hover){
+
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+.container:has(.box-five:hover){
+
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+.container .box-effect::before{
+
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000,transparent,#000);
+}
+
+/* Below Deck */
+
+footer{
+
+  position: relative;
+  width: 100%;
+  background: var(--color1);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .icons{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer .icons li{
+
+  list-style: none;
+}
+
+footer .icons li a{
+
+  font-size: 2em;
+  color: var(--color5);
+  margin: 0 10px;
+  display: flex;
+  transition: 0.5s;
+}
+
+footer .icons li a:hover{
+  transform: translateY(-10px);
+}
+
+/* switch */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
