@@ -16,6 +16,8 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="bio.php">About Me</a></li>
+            <li><a href="dashboard1.php">Dashboard</a></li>
+            <li><a href="form.php">Tambah Data</a></li>
         </ul>
 
         <label class="switch">
@@ -64,38 +66,11 @@
 
     <hr class="c-white">
     
-    <section class="banner" >
-        <div class="contentBox" >
-            <div class="formBox" >
-                 <h2 >Login</h2>
-                 <form action="process.php" method="post">
-                    <div class="inputBox">
-                        <span >Username</span>
-                        <input type="text" name="input_username" style="color: var(--text);">
-                        <label for="input_username"></label>
-                    </div>
-                    <div class="inputBox">
-                        <span>NIM</span>
-                        <input type="number" name="input_nim" style="color: var(--text);">
-                        <label for="input_nim"></label>
-                    </div>
-                    <div class="inputBox">
-                        <span>Password</span>
-                        <input type="password" name="input_pass" style="color: var(--text);">
-                        <label for="input_pass"></label>
-                    </div>
-                    <div class="inputBox">
-                        <input type="submit" value="submit" name="" style="color: var(--text);">
-                    </div>
-                 </form>
-            </div>
-        </div>
-
         <div class="contentBox">
             <div class="output">
                 <?php
                     echo "<hr/>";
-                    include("process.php")
+                    include("koneksi.php")
                 ?>
             </div>
         </div>
